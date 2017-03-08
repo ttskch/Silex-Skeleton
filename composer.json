@@ -1,5 +1,5 @@
 {
-    "name": "fabpot/silex-skeleton",
+    "name": "ttskch/silex-skeleton",
     "description": "A pre-configured skeleton for the Silex microframework",
     "license": "MIT",
     "type": "project",
@@ -27,7 +27,7 @@
         "fortawesome/font-awesome": "^4.6"
     },
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-4": { "Ttskch\\": "src/services" }
     },
     "extra": {
         "branch-alias": {
