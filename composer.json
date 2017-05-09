@@ -43,7 +43,8 @@
         "post-install-cmd": [
             "ln -sf ../../vendor/twbs/bootstrap/dist web/lib/bootstrap",
             "ln -sf ../../vendor/select2/select2/dist web/lib/select2",
-            "mkdir -p web/lib/select2-bootstrap && cd $_ && curl -sS https://raw.githubusercontent.com/select2/select2-bootstrap-theme/master/dist/select2-bootstrap.min.css > select2-bootstrap.min.css && cd -",
+            "mkdir -p web/lib/select2-bootstrap",
+            "curl -sS https://raw.githubusercontent.com/select2/select2-bootstrap-theme/master/dist/select2-bootstrap.min.css > web/lib/select2-bootstrap/select2-bootstrap.min.css",
             "ln -sf ../../vendor/fortawesome/font-awesome web/lib/font-awesome"
         ]
     }
