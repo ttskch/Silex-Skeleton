@@ -1,5 +1,5 @@
 $(function () {
-    $('select').select2({
-        theme: "bootstrap"
-    });
+    // $('select').select2({
+    //     theme: "bootstrap"
+    // });
 });
