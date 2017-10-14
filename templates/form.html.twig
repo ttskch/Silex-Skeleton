@@ -3,13 +3,17 @@
 {% block subtitle %}Form Sample{% endblock %}
 
 {% block content %}
-    <ul class="nav nav-tabs mb15">
-        <li><a href="{{ url('homepage') }}">Home</a></li>
-        <li class="active"><a>Form Sample</a></li>
+    <ul class="nav nav-tabs mb-3">
+        <li class="nav-item">
+            <a href="{{ url('homepage') }}" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active">Form Sample</a>
+        </li>
     </ul>
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-lg-10">
             {{ form(form) }}
         </div>
     </div>

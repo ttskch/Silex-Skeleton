@@ -22,36 +22,32 @@ $form = $app['form.factory']->createBuilder(FormType::class)
         ],
     ])
     ->add('gender', ChoiceType::class, [
-        'required' => false,
-        'placeholder' => false,
-        'attr' => [
-            'class' => 'inline',
-        ],
-        'choices' => [
+        'choices' => $genderChoices = [
             'male' => 'male',
             'female' => 'female',
+            'other' => 'other',
         ],
+        'choice_attr' => function ($value, $key, $index) {
+            return [
+                'class' => 'form-check-inline',
+            ];
+        },
         'data' => 'male',
         'expanded' => true,
         'multiple' => false,
         'constraints' => [
-            new Assert\Choice([
-                'male',
-                'female',
-            ]),
+            new Assert\NotBlank(),
+            new Assert\Choice(array_keys($genderChoices)),
         ],
     ])
     ->add('interesting_services', ChoiceType::class, [
         'required' => false,
-        'attr' => [
-            'placeholder' => 'Multiple selection',
-        ],
         'choices' => [
             'Service A' => 'Service A',
             'Service B' => 'Service B',
             'Service C' => 'Service C',
         ],
-        'expanded' => false,
+        'expanded' => true,
         'multiple' => true,
     ])
     ->add('message', TextareaType::class, [
