@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>
-        {% block title %}{#
-            #}{% block subtitle %}{% endblock %}{#
-            #}{% if block('subtitle') is not empty %} | {% endif %}{#
-            #}{% block site_title %}My Silex Application{% endblock %}{#
-        #}{% endblock %}
+        {%- block title %}
+            {%- block subtitle %}{% endblock -%}
+            {%- if block('subtitle') is not empty %} | {% endif -%}
+            {%- block site_title %}My Silex Application{% endblock -%}
+        {% endblock -%}
     </title>
     <meta name="description" content="{{ block('subtitle') }}">
     <link rel="canonical" href="{{ global.request.uri }}">

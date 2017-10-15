@@ -38,4 +38,8 @@ $app->extend('translator', function ($translator, $app) {
     return $translator;
 });
 
+//$app['your_service'] = $app->factory(function () use ($app) {
+//    return new \Ttskch\YourService($app['some_secret_config']);
+//});
+
 return $app;
