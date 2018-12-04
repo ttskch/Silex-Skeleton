@@ -1,3 +1,7 @@
+This repository is already deprecated. Use [ttskch/symfony-micro-skeleton](https://github.com/ttskch/symfony-micro-skeleton) instead.
+
+---
+
 # ttskch/Silex-Skeleton
 
 Forked from [silexphp/Silex-Skeleton](https://github.com/silexphp/Silex-Skeleton) and added folowing features.
